@@ -2,7 +2,7 @@ const express    = require('express');
 const bodyParser = require('body-parser');
 const app        = express();
 const request    = require('request');
-var chalk        = require('chalk');
+const chalk        = require('chalk');
 
 const apiKey     = 'Insert API Key here';
 const avWxAPIKey = 'Insert API Key here';
@@ -12,10 +12,6 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (req,res) {
   res.render('index', {cityName: null, weather: null, error: null});
-});
-
-app.get('/wx', function (req,res) {
-  res.render('wx', {cityName: null, weather: null, error: null});
 });
 
 app.post('/', function (req,res) {
