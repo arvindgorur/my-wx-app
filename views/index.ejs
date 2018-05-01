@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <p>
+    <div class="container">
+      <div class="alert alert-info" role="alert">
+        <h1 class="display-4">Welcome to the Weather App!</h1>
+      </div>
+      <p class="lead">This simple app will display the current temperature of the city you enter</p>
+      <hr class="my-4">
+      <form action="/" method="post">
+        <p>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="wxType"><b>Wx Type</b></label>
+            <select class="form-control" id="wxType" name="wxType">
+              <option>Regular</option>
+              <option>METAR</option>
+            </select>
+          </div>
+          <div class="form-group col-md-8">
+            <label for="cityName"><b>City Name (Regular)/ICAO Code (METAR)</b></label>
+            <input type="text" name="cityName" class="form-control" id="cityName" placeholder="e.g Toronto or CYYZ">
+          </div>
+        </div>
+        <p class="lead">
+          <button class="btn btn-primary btn-md" type="submit">Get Wx Info!</button>
+        </p>
+      </form>
+      <% if(cityName !== null) { %>
+        <div class="alert alert-success" role="alert">
+          <!--<span class="border-bottom"><%= error %></span>-->
+          <%= weather %>
+        </div>
+      <% } %>
+      <% if(error !== null) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
