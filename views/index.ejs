@@ -24,7 +24,7 @@
           </div>
           <div class="form-group col-md-8">
             <label for="cityName"><b>City Name (Regular)/ICAO Code (METAR)</b></label>
-            <input type="text" name="cityName" class="form-control" id="cityName" placeholder="e.g Toronto or CYYZ">
+            <input type="text" name="cityName" class="form-control" id="cityName" placeholder="e.g. Toronto or CYYZ">
           </div>
         </div>
         <p class="lead">
@@ -33,7 +33,6 @@
       </form>
       <% if(cityName !== null) { %>
         <div class="alert alert-success" role="alert">
-          <!--<span class="border-bottom"><%= error %></span>-->
           <%= weather %>
         </div>
       <% } %>
