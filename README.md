@@ -8,7 +8,7 @@ In order to use this app you will need to sign up for API keys at openweathermap
 1. Select the type of weather you want:
    - Regular - This will provide the regular weather for the city you enter.
    - METAR - This will provide the latest METAR (hourly observation) at the airport you enter. This takes the 4 letter ICAO identifier of the station.
-   - TAF - This will provide the latest TAF (forecast) at the airport you enter.This takes the 4 letter ICAO identifier of the station.
+   - TAF - This will provide the latest TAF (forecast) at the airport you enter. This takes the 4 letter ICAO identifier of the station.
 2. Hit the blue button!
 
 If the query was successful, you will get the results in a green box below. If not, you will get an error in a red box.
