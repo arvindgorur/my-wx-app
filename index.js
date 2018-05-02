@@ -17,36 +17,8 @@ app.get('/', function (req,res) {
 app.post('/', function (req,res) {
   let city   = req.body.cityName;
   let wxType = req.body.wxType;
-  let url    = `https://api.checkwx.com/${wxType.toLowerCase()}/${city}`;
-  if(wxType == 'METAR') {
-    var options = {
-      url: `https://api.checkwx.com/metar/${city}`,
-      headers: {
-        'X-API-Key': avWxAPIKey
-      }
-    };
 
-    request(options, function(err, response, body) {
-      let results = JSON.parse(body); 
-      let metar = results.data[0]
-      res.render('index', {cityName: city, weather: metar, error: null});
-    });
-  }
-  else if(wxType == 'TAF'){
-    var options = {
-      url: url,
-      headers: {
-        'X-API-Key': avWxAPIKey
-      }
-    };
-
-    request(options, function(err, response, body) {
-      let results = JSON.parse(body); 
-      let taf = results.data[0]
-      res.render('index', {cityName: city, weather: taf, error: null});
-    });
-  }
-  else {
+  if (wxType == 'Regular') {
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
     request(url, function(err, response, body) {
@@ -69,6 +41,30 @@ app.post('/', function (req,res) {
         }
       }
     });
+  }
+  else {
+    let url    = `https://api.checkwx.com/${wxType.toLowerCase()}/${city}`;
+    var options = {
+      url: url,
+      headers: {
+        'X-API-Key': avWxAPIKey
+      }
+    };
+
+    if(wxType == 'METAR') {
+      request(options, function(err, response, body) {
+        let results = JSON.parse(body); 
+        let metar = results.data[0]
+        res.render('index', {cityName: city, weather: metar, error: null});
+      });
+    }
+    else {
+      request(options, function(err, response, body) {
+        let results = JSON.parse(body); 
+        let taf = results.data[0]
+        res.render('index', {cityName: city, weather: taf, error: null});
+      });
+    }
   }
 });
 
