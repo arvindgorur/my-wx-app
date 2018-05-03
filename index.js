@@ -4,8 +4,8 @@ const app        = express();
 const request    = require('request');
 const chalk      = require('chalk');
 
-const apiKey     = 'Insert API Key here';
-const avWxAPIKey = 'Insert API Key here';
+const apiKey     = 'Insert API key here';
+const avWxAPIKey = 'Insert API key here';
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -23,7 +23,7 @@ app.post('/', function (req,res) {
 
     request(url, function(err, response, body) {
       if(err) {
-        res.render('index', {cityName: city, error: 'Error, please try again'});
+        res.render('index', {cityName: null, error: 'Error, please try again'});
       }
       else {
         let weather = JSON.parse(body);
