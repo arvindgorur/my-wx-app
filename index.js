@@ -1,11 +1,15 @@
 const express    = require('express');
 const bodyParser = require('body-parser');
-const app        = express();
 const request    = require('request');
 const chalk      = require('chalk');
+const path       = require('path');
 
 const apiKey     = 'Insert API key here';
 const avWxAPIKey = 'Insert API key here';
+
+let app          = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -43,8 +47,8 @@ app.post('/', function (req,res) {
     });
   }
   else {
-    let url    = `https://api.checkwx.com/${wxType.toLowerCase()}/${city}`;
-    var options = {
+    let url     = `https://api.checkwx.com/${wxType.toLowerCase()}/${city}`;
+    let options = {
       url: url,
       headers: {
         'X-API-Key': avWxAPIKey
@@ -54,14 +58,14 @@ app.post('/', function (req,res) {
     if(wxType == 'METAR') {
       request(options, function(err, response, body) {
         let results = JSON.parse(body); 
-        let metar = results.data[0]
+        let metar   = results.data[0]
         res.render('index', {cityName: city, weather: metar, error: null});
       });
     }
     else {
       request(options, function(err, response, body) {
         let results = JSON.parse(body); 
-        let taf = results.data[0]
+        let taf     = results.data[0]
         res.render('index', {cityName: city, weather: taf, error: null});
       });
     }

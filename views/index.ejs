@@ -2,15 +2,17 @@
 <html>
   <head>
     <title>Weather App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono">
+		<link href="css/main.css" rel="stylesheet">
   </head>
   <body>
     <p>
     <div class="container">
-      <div class="alert alert-info" role="alert">
+      <div class="alert alert-info" role="alert" id="top">
         <h1 class="display-4">Welcome to the Weather App!</h1>
       </div>
-      <p class="lead">This simple app will display the current temperature of the city you enter</p>
+      <p class="lead" id="description">This simple app will display the current temperature of the city you enter</p>
       <hr class="my-4">
       <form action="/" method="post">
         <p>
@@ -33,7 +35,7 @@
         </p>
       </form>
       <% if(cityName !== null) { %>
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert" id="results">
           <%= weather %>
         </div>
       <% } %>
