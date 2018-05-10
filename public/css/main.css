@@ -1,5 +1,5 @@
 #top {
-    font-family: 'Courgette';
+    font-family: 'Spirax';
 }
 
 #description {
@@ -10,4 +10,8 @@
 #results {
     font-family: 'Space Mono';
     font-size: 22px;
+}
+
+#form-title {
+    font-family: 'Sniglet';
 }

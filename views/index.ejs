@@ -3,7 +3,7 @@
   <head>
     <title>Weather App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet">
 		<link href="css/main.css" rel="stylesheet">
   </head>
   <body>
@@ -17,7 +17,7 @@
       <form action="/" method="post">
         <p>
         <div class="form-row">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-4" id="form-title">
             <label for="wxType"><b>Wx Type</b></label>
             <select class="form-control" id="wxType" name="wxType">
               <option>Regular</option>
@@ -25,7 +25,7 @@
               <option>TAF</option>
             </select>
           </div>
-          <div class="form-group col-md-8">
+          <div class="form-group col-md-8" id="form-title">
             <label for="cityName"><b>City Name (Regular)/ICAO Code (METAR/TAF)</b></label>
             <input type="text" name="cityName" class="form-control" id="cityName" placeholder="e.g. Toronto or CYYZ">
           </div>
