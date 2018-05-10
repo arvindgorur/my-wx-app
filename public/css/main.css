@@ -5,6 +5,8 @@
 #description {
     font-family: 'Patrick Hand';
     font-size: 30px;
+    line-height: 100px;
+    color: white
 }
 
 #results {
@@ -14,4 +16,17 @@
 
 #form-title {
     font-family: 'Sniglet';
+    color: white
+}
+
+body {
+    background-color: #640101e3;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.alert-info2 {
+    color: black;background-color:#d1ecf1;border-color:#bee5eb
 }
