@@ -1,6 +1,6 @@
 #top {
     font-family: 'Spirax';
-    background-color: #66340be3;
+    background-color: #660b0be3;
     color: white;
     border-color: #300101e3;
     border-bottom-width: 5px;
@@ -10,7 +10,6 @@
     font-family: 'Patrick Hand';
     font-size: 30px;
     line-height: 100px;
-    color: white
 }
 
 #results {
@@ -18,15 +17,14 @@
     font-size: 22px;
 }
 
-#form-title {
-    font-family: 'Sniglet';
-    color: white
-}
-
 body {
-    background-color: #a1754cf8;
     display: table;
+    background: silver;
     position: absolute;
     height: 100%;
     width: 100%;
+}
+
+#button-icons {
+    padding-right: 10px;
 }
