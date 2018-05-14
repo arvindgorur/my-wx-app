@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet");
-=======
-@import url('https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet');
->>>>>>> de23b23166bdce528aedbd64033b1241489e172e
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 #top {
     font-family: 'Spirax';
@@ -14,14 +11,17 @@
 }
 
 #description {
-    font-family: 'Patrick Hand';
     font-size: 30px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     //line-height: 100px;
     color: white
 =======
     line-height: 100px;
 >>>>>>> de23b23166bdce528aedbd64033b1241489e172e
+=======
+    padding-top: 20px;
+>>>>>>> f793c98cefbe76d765efc00af32bae4d9f1f6f40
 }
 
 #results {
@@ -30,8 +30,9 @@
 }
 
 body {
+    font-family: 'Nunito';
     display: table;
-    background: silver;
+    background: #e4e3e3;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -50,5 +51,15 @@ body {
 =======
 #button-icons {
     padding-right: 10px;
+<<<<<<< HEAD
 >>>>>>> de23b23166bdce528aedbd64033b1241489e172e
+=======
+    vertical-align: bottom;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background: aquamarine;
+    }
+>>>>>>> f793c98cefbe76d765efc00af32bae4d9f1f6f40
 }
