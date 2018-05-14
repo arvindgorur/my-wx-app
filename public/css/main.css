@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet");
+=======
+@import url('https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet');
+>>>>>>> de23b23166bdce528aedbd64033b1241489e172e
 
 #top {
     font-family: 'Spirax';
-    background-color: #66340be3;
+    background-color: #660b0be3;
     color: white;
     border-color: #300101e3;
     border-bottom-width: 5px;
@@ -12,8 +16,12 @@
 #description {
     font-family: 'Patrick Hand';
     font-size: 30px;
+<<<<<<< HEAD
     //line-height: 100px;
     color: white
+=======
+    line-height: 100px;
+>>>>>>> de23b23166bdce528aedbd64033b1241489e172e
 }
 
 #results {
@@ -21,19 +29,15 @@
     font-size: 22px;
 }
 
-#form-title {
-    font-family: 'Sniglet';
-    color: white
-}
-
 body {
-    background-color: #a1754cf8;
     display: table;
+    background: silver;
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 700px) {
     body {
         background-color: paleturquoise;
@@ -43,4 +47,8 @@ body {
         font-size: 1rem;
         color: black;
     }
+=======
+#button-icons {
+    padding-right: 10px;
+>>>>>>> de23b23166bdce528aedbd64033b1241489e172e
 }
