@@ -1,3 +1,6 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet");
+
 #top {
     font-family: 'Spirax';
     background-color: #66340be3;
@@ -9,7 +12,7 @@
 #description {
     font-family: 'Patrick Hand';
     font-size: 30px;
-    line-height: 100px;
+    //line-height: 100px;
     color: white
 }
 
@@ -29,4 +32,15 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: paleturquoise;
+    }
+
+    #description {
+        font-size: 1rem;
+        color: black;
+    }
 }
