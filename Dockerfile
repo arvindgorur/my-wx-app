@@ -1,6 +1,6 @@
 FROM node:latest
 
-COPY /my-wx-app /app
+COPY . /app
 
 RUN cd /app; npm install
 
