@@ -6,6 +6,7 @@ const path       = require('path');
 
 const apiKey     = 'Insert API key here';
 const avWxAPIKey = 'Insert API key here';
+const router     = express.Router();
 
 let app          = express();
 
@@ -14,11 +15,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
-app.get('/', function (req,res) {
+router.route('/hello')
+  .get((req,res) => {
+    res.send("Hello, World!");
+  });
+
+app.use('/', router);
+
+app.get('/', (req,res) => {
   res.render('index', {cityName: null, weather: null, error: null});
 });
 
-app.post('/', function (req,res) {
+app.post('/', (req,res) => {
   let city   = req.body.cityName;
   let wxType = req.body.wxType;
 
@@ -57,14 +65,14 @@ app.post('/', function (req,res) {
 
     if(wxType == 'METAR') {
       request(options, function(err, response, body) {
-        let results = JSON.parse(body); 
+        let results = JSON.parse(body);
         let metar   = results.data[0]
         res.render('index', {cityName: city, weather: metar, error: null});
       });
     }
     else {
       request(options, function(err, response, body) {
-        let results = JSON.parse(body); 
+        let results = JSON.parse(body);
         let taf     = results.data[0]
         res.render('index', {cityName: city, weather: taf, error: null});
       });
@@ -72,6 +80,6 @@ app.post('/', function (req,res) {
   }
 });
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log(`Listening on port ${chalk.green('3000')}`);
 });

@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "my-wx-app",
   "version": "1.0.0",
-  "description": "A simple Hello World application",
+  "description": "A simple weather application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
