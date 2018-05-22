@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet|Nunito");
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+body {
+    font-family: 'Nunito';
+    font-size: 16px;
+    display: table;
+    background: #e4e3e3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 #top {
     font-family: 'Spirax';
     background-color: #660b0be3;
@@ -11,10 +20,16 @@
 }
 
 #description {
-    font-size: 30px;
+    font-size: 1rem;
+    font-family: 'Courgette';
     color: black;
     /*line-height: 100px;*/
-    padding-top: 20px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-left: 0.25em solid #300101e3;
+    padding-left: 1em;
+    vertical-align: top;
+    background: tan;
 }
 
 #results {
@@ -22,14 +37,6 @@
     font-size: 22px;
 }
 
-body {
-    font-family: 'Nunito';
-    display: table;
-    background: #e4e3e3;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
 
 @media only screen and (max-width: 700px) {
     body {
