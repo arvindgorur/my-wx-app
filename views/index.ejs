@@ -2,46 +2,57 @@
 <html>
   <head>
     <title>Weather App</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="css/main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    />
   </head>
   <body>
-    <p>
+    <p></p>
     <div class="container">
-      <div class="alert" id="top">
-        <h1 class="display-4">Welcome to the Weather App!</h1>
+      <div class="banner">
+        <h1 class="title">Welcome to the Weather App!</h1>
       </div>
-      <div id="description">This simple app will display the current temperature of the city you enter</div>
-      <hr class="my-4">
+      <hr class="my-4" />
       <form action="/" method="post">
-        <p>
+        <p></p>
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="wxType"><b>Wx Type</b></label>
-            <select class="form-control" id="wxType" name="wxType">
+            <select
+              class="form-control form-control-custom"
+              id="wxType"
+              name="wxType"
+            >
               <option>Regular</option>
               <option>METAR</option>
               <option>TAF</option>
             </select>
           </div>
           <div class="form-group col-md-8">
-            <label for="cityName"><b>City Name (Regular)/ICAO Code (METAR/TAF)</b></label>
-            <input type="text" name="cityName" class="form-control" id="cityName" placeholder="e.g. Toronto or CYYZ">
+            <label for="cityName"
+              ><b>City Name (Regular)/ICAO Code (METAR/TAF)</b></label
+            >
+            <input
+              type="text"
+              name="cityName"
+              class="form-control form-control-custom station-text"
+              id="cityName"
+              placeholder="e.g. Toronto or CYYZ"
+            />
           </div>
         </div>
         <p class="lead">
-          <button class="btn btn-primary btn-md" type="submit"><i class="material-icons md-24" id="button-icons">wb_cloudy</i>Get Wx Info</button>
+          <button class="btn btn-custom btn-md" type="submit">
+            <i class="material-icons md-24 btn-icons">wb_cloudy</i>Get Wx Info
+          </button>
         </p>
       </form>
       <% if(cityName !== null) { %>
-        <div class="alert alert-success" role="alert" id="results">
-          <%= weather %>
-        </div>
-      <% } %>
-      <% if(error !== null) { %>
-        <div class="alert alert-danger" role="alert">
-          <%= error %>
-        </div>
+      <div class="results-success" role="alert"><%= weather %></div>
+      <% } %> <% if(error !== null) { %>
+      <div class="results-error" role="alert"><%= error %></div>
       <% } %>
     </div>
   </body>

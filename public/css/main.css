@@ -1,55 +1,105 @@
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
-@import url("https://fonts.googleapis.com/css?family=Courgette|Patrick+Hand|Space+Mono|Spirax|Sniglet|Nunito");
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
 
 body {
-    font-family: 'Nunito';
-    font-size: 16px;
-    display: table;
-    background: #e4e3e3;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  background: #ffffff;
+  color: #000000;
+  display: table;
+  font-family: "Montserrat";
+  font-size: 16px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
+
+.banner {
+  padding: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 3px solid transparent;
+  border-color: #4fbdb1;
+  text-align: center;
+  color: #cccccc;
+  background-color: #1d2829;
+}
+
+.btn-custom {
+  background-color: #c17f39;
+  border-radius: 0;
+  box-shadow: 1px 6px 25px #3d393973;
+  color: #000000;
+  letter-spacing: 0.05rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+.btn-custom:hover {
+  background: #330c0c;
+  color: #ffffff;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.form-control-custom {
+  color: #30353a;
+  background-color: #d5dedd;
+  border: 1px solid #225d98;
+  border-radius: 0px;
+}
+
+.form-control-custom:hover {
+  border: 1px solid #1c2631;
+}
+
+.form-control-custom:focus {
+  background-color: #d5dedd;
+}
+
 #top {
-    font-family: 'Spirax';
-    background-color: #660b0be3;
-    color: white;
-    border-color: #300101e3;
-    border-bottom-width: 5px;
+  background-color: #660b0be3;
+  color: white;
+  border-color: #300101e3;
+  border-bottom-width: 5px;
 }
 
-#description {
-    font-size: 1rem;
-    font-family: 'Courgette';
-    color: black;
-    /*line-height: 100px;*/
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    border-left: 0.25em solid #300101e3;
-    padding-left: 1em;
-    vertical-align: top;
-    background: tan;
+.results {
+  font-size: 20px;
 }
 
-#results {
-    font-family: 'Space Mono';
-    font-size: 22px;
+.results-success {
+  color: #155724;
+  background-color: #edebd4;
+  border: 1px solid transparent;
+  border-color: #c3e6cb;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
+.results-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid transparent;
+  border-color: #6d2930;
+  padding: 0.75rem 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 
+.station-text {
+  text-transform: uppercase;
+}
 @media only screen and (max-width: 700px) {
-    body {
-        background-color: paleturquoise;
-    }
-
-    #description {
-        font-size: 1rem;
-        color: black;
-    }
+  body {
+    background-color: paleturquoise;
+  }
 }
 
-#button-icons {
-    padding-right: 10px;
-    vertical-align: bottom;
+.btn-icons {
+  padding-right: 10px;
+  vertical-align: bottom;
 }
