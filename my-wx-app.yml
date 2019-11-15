@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: my-wx-app
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       labels:
@@ -17,6 +17,17 @@ spec:
         image: arvindgorur/my-wx-app:latest
         ports:
           - containerPort: 3000
+        env:
+          - name: OPEN_WX_API_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: apikeys
+                key: openwxmap
+          - name: AV_WX_API_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: apikeys
+                key: checkwx
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +39,5 @@ spec:
     protocol: TCP
     targetPort: 3000
   type: NodePort
-  clusterIP: 10.152.183.25
   selector:
     app: my-wx-app
