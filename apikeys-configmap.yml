@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apikeys
+data:
+  checkwx: checkwx_api_key
+  openexpmap: openweathermap_api_key
